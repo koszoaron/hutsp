@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2014  Aron Koszo
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <fragment 
+        android:id="@+id/map"
+        android:layout_width="700dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:name="com.google.android.gms.maps.MapFragment" />
+
+    <TextView
+        android:id="@+id/tvAddCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/map"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/add_city_to_path" />
+
+    <Spinner
+        android:id="@+id/spCities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvAddCity"
+        android:layout_alignLeft="@+id/tvAddCity"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp" />
+
+    <TextView
+        android:id="@+id/tvNumCities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spCities"
+        android:layout_alignLeft="@+id/spCities"
+        android:layout_marginTop="10dp"
+        android:text="@string/number_of_cities" />
+
+    <EditText
+        android:id="@+id/etNumCities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tvNumCities"
+        android:layout_toRightOf="@+id/tvNumCities"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btnGenerateCities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etNumCities"
+        android:layout_alignLeft="@+id/tvNumCities"
+        android:layout_marginTop="5dp"
+        android:text="@string/generate" />
+
+    <Button
+        android:id="@+id/btnClearMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnGenerateCities"
+        android:layout_toRightOf="@+id/btnGenerateCities"
+        android:layout_marginLeft="10dp"
+        android:text="@string/clear_map" />
+    
+    <TextView
+        android:id="@+id/tvMethod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnGenerateCities"
+        android:layout_toRightOf="@+id/map"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/method" />
+
+    <Spinner
+        android:id="@+id/spMethod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvMethod"
+        android:layout_alignLeft="@+id/tvMethod"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spMethod"
+		android:layout_toRightOf="@+id/map"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="@string/start" />
+    
+    <TextView 
+        android:id="@+id/tvTotalDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnStart"
+        android:layout_toRightOf="@+id/map"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp" />
+    
+</RelativeLayout>

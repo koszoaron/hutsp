@@ -1,0 +1,21 @@
+<resources>
+
+    <string name="app_name">MagyarTSP</string>
+    <string name="add_city_to_path">Város hozzáadása az útvonalhoz:</string>
+    <string name="number_of_cities">Városok száma:</string>
+    <string name="generate">Generálás</string>
+    <string name="clear_map">Törlés</string>
+    <string name="start">Indítás</string>
+    <string name="invalid_range">Érvénytelen tartomány!</string>
+    <string name="please_select_some_cities">Kérem válasszon városokat!</string>
+    <string name="method">Módszer:</string>
+    <string name="total_distance">Teljes táv: </string>
+    
+    <string-array name="tsp_methods">
+        <item>Nearest Neighbour</item>
+        <item>Nearest Addition</item>
+        <item>Nearest Insertion</item>
+        <item>Cheapest Insertion</item>
+    </string-array>
+
+</resources>
